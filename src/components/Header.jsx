@@ -2,12 +2,18 @@ import React from "react";
 import EventNoteIcon from "@material-ui/icons/EventNote";
 
 function Header() {
+  function reload() {
+    // window.location.reload();
+  }
   return (
     <header>
-      <h1>
+      <div onClick = {reload}>
+      <h1 >
         <EventNoteIcon />
+        <span> </span>
         Sticky Notes
       </h1>
+      </div>
     </header>
   );
 }

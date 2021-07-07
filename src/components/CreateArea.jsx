@@ -9,6 +9,13 @@ function CreateArea(props) {
     content: ""
   });
 
+  const style = {
+    fontWeight: 'bold',
+    fontSize: 25,
+    fontFamily: "Arial",
+    
+  };
+
   const [isExpand, setExpand] = useState(false);
 
   function handleChange(event) {
@@ -38,8 +45,9 @@ function CreateArea(props) {
   return (
     <div>
       <form className="create-note">
-        {isExpand ? (
-          <input
+      {isExpand ? (
+          <input 
+            style={style}
             name="title"
             onChange={handleChange}
             value={note.title}
@@ -52,7 +60,7 @@ function CreateArea(props) {
           onChange={handleChange}
           value={note.content}
           placeholder="Take a note..."
-          rows={isExpand ? "3" : "1"}
+          rows={isExpand ? "5" : "1"}
         />
         <Zoom in={isExpand}>
           <Fab onClick={submitNote}>
