@@ -1,5 +1,7 @@
 import React from "react";
 import EventNoteIcon from "@material-ui/icons/EventNote";
+import {Link} from "react-router-dom"
+import { Button} from 'react-bootstrap';
 
 function Header() {
   function reload() {
@@ -13,6 +15,8 @@ function Header() {
         <span> </span>
         Sticky Notes
       </h1>
+      <Link to="/register">Register</Link>
+      
       </div>
     </header>
   );
